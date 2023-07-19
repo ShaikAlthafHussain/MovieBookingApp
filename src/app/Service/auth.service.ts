@@ -13,7 +13,7 @@ export class AuthService {
   loggedIn: boolean = localStorage.getItem("accessToken") != null ? true : false;
   username : string = localStorage.getItem("un")!= null ? "string" : "akhil123";
   constructor(private http: HttpClient) { }
-
+//authorize
   login(data: any): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(`${this.baseUrl}/api/v1/Authentication/Login`, data);
   }
